@@ -1,0 +1,27 @@
+@startuml Strategy
+abstract class Character {
+  {field} ~WeaponBehavior weapon
+  {method} Character(WeaponBehavior w) {weapon = w}
+  {method} +void fight() {weapon.useWeapon()}
+  {method} +void setWeaponBehavior(WeaponBehavior w) {weapon = w}
+}
+
+Character o-- WeaponBehavior
+
+class Knight extends Character
+
+class Wizard extends Character
+
+interface WeaponBehavior {
+  {method} useWeapon()
+}
+
+class SwordBehavior implements WeaponBehavior {
+  {method} +void useWeapon() {implements sword fighting}
+}
+
+class MagicBehavior implements WeaponBehavior {
+  {method} +void useWeapon() {implements magic fighting}
+}
+
+@enduml
