@@ -1,0 +1,47 @@
+@startuml Observer
+Interface Subject {
+  {method} void registerObserver(Observer o)
+  {method} void removeObserver(Observer o)
+  {method} void notifyObservers()
+}
+
+Class WeatherData implements Subject {
+  {field} -ArrayList<Observer> observers;
+  {field} -float temperature;
+  {field} -float humidity;
+  {field} -float pressure;
+
+  {method} +void registerObserver(Observer o) {...}
+  {method} +void removeObserver(Observer o) {...}
+  {method} ~void notifyObservers() {//foreach observer invoke update()}
+
+  {method} +float getTemperature() {...}
+  {method} +float getHumidity() {...}
+  {method} +float getPressure() {...}
+  {method} +void setMeasurements(float t, float h, float p) {...measurementsChanged()}
+  {method} -void measurementsChanged() {notifyObservers()}
+}
+
+Subject o-- Observer
+
+Interface Observer {
+  {method} void update(float t, float h, float p)
+}
+
+Observer <|.. CurrentWeatherDisplay
+note on link: display() could be refactored as Strategy
+Observer <|.. ForecastDisplay
+
+
+Class CurrentWeatherDisplay {
+  {method} +void update(float t, float h, float p) {...}
+  {method} +void display() {...}
+}
+
+Class ForecastDisplay {
+  {method} +void update(float t, float h, float p) {...}
+  {method} +void display() {...}
+}
+
+
+@enduml
