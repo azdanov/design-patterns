@@ -52,7 +52,11 @@ The observer pattern defines a one-to-many dependency between objects so that wh
 ![Strategy](http://www.plantuml.com/plantuml/svg/nLJBQiCm4BpxAnQV759Cqri8XT2cnrnQ-W6olBM5RIb8wpum_lTARQGuJaDy2FGcj3Cxezb5QqDCKzlKy4AQ4HPV4SkCFN82NZDZu07VKRC2eOi0kZU1TTuxi905v6Yu5ZiIIi8znA-oakf3GhQdn8xH89NAKkQUL21j3hna1bsQflqnD7Z8LPlL25mPIcPH7qM_ffxCJgCn2l2JKEPZbxwHXpcHiLbVYs6aVIHfUHgfrH8MwN9feS72XkdgMJ535pm4t3LC10-Z8JqgcOi6fKsMApj7fI-u6aHyPYo7bsv5NOLsVoWD5oEe-HrO7QkwNia9oBsGIc5IVs6p2ST-uXRvZ3mnFO7C8RxvSH2lfkQzkBN5q75V7cp1Ll6INIqSr-oVqt4MfiTpTpQUjGt4VYlV 'Strategy')
 
 ```java
-
+// Example usage of decorator pattern
+Beverage beverage = new DarkRoast();
+beverage = new Mocha(beverage);
+beverage = new Milk(beverage);
+System.out.println(beverage.getDescription() + " $" + beverage.cost());
 ```
 
 The decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
