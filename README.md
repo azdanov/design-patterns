@@ -57,6 +57,7 @@ Beverage beverage = new DarkRoast();
 beverage = new Mocha(beverage);
 beverage = new Milk(beverage);
 System.out.println(beverage.getDescription() + " $" + beverage.cost());
+// Output: Dark Roast Coffee, Mocha, Milk $1.29
 ```
 
 The decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
