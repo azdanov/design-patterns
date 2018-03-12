@@ -11,6 +11,7 @@ A set of common object-oriented ideas that help solve common programming challen
   - [Patterns](#patterns)
     - [Strategy](#strategy)
     - [Observer](#observer)
+    - [Decorator](#decorator)
 
 ## Basics
 
@@ -25,6 +26,7 @@ A set of common object-oriented ideas that help solve common programming challen
 2.  Program to an interface, not a concrete implementation.
 3.  Favor composition over inheritance.
 4.  Strive for loosely coupled designs between objects that interact.
+5.  Classes should be open for extension but closed for modification.
 
 ## Patterns
 
@@ -42,3 +44,15 @@ Strategy lets the algorithm vary independently from clients that use it.
 ![Observer](http://www.plantuml.com/plantuml/svg/jLJ1JeD04Btp5NEagT2xDaPJOpJHQAA9voqxm5fWoUv0GX2_tQMmbBPKU_6sOT-yVU_D33UQcA8YJU1bhL6Lg9p7Z525B41uAzQV613K3a2T8iMIDr1AmK5X9BI1sIBN7a3E9i2fBF4iQ2P9X9L5Q7VcD8wpIfZMy86CObHtZ1Y8D4ymnOpqliPGO6Ael5kbMFLa52ujrJL8IterHeQ9P0I4QOwAKQ5muZOkKi45LHDNkKAjjrLZA_C_CuBQz_rcgkPKLCSLtzE9GRrOX58X2-B1CuYib1k48kUCq9qr-t8xBn7I-ou7TqhZ07pe8_aTzTgduvxqgv6UaRMORJVTlXqNq2Tl3td7a8wmgvXb4VBMp8ZMsz9Eug0-ogffnyjEaFIytHACjc1eml4Qz7cULjto3_NBBz-7LQ6KaMMdMUWyOPLZb27831AHRIw1Tr-Dv40M2OSrci4mMiYqbGCpGq-cIHXL1zptvZvWcYohNPt9D_VjpC_pSwgFEyKTODZQ0qd__QXpWnatVxCV 'Observer')
 
 The observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+---
+
+### Decorator
+
+![Strategy](http://www.plantuml.com/plantuml/svg/nLJBQiCm4BpxAnQV759Cqri8XT2cnrnQ-W6olBM5RIb8wpum_lTARQGuJaDy2FGcj3Cxezb5QqDCKzlKy4AQ4HPV4SkCFN82NZDZu07VKRC2eOi0kZU1TTuxi905v6Yu5ZiIIi8znA-oakf3GhQdn8xH89NAKkQUL21j3hna1bsQflqnD7Z8LPlL25mPIcPH7qM_ffxCJgCn2l2JKEPZbxwHXpcHiLbVYs6aVIHfUHgfrH8MwN9feS72XkdgMJ535pm4t3LC10-Z8JqgcOi6fKsMApj7fI-u6aHyPYo7bsv5NOLsVoWD5oEe-HrO7QkwNia9oBsGIc5IVs6p2ST-uXRvZ3mnFO7C8RxvSH2lfkQzkBN5q75V7cp1Ll6INIqSr-oVqt4MfiTpTpQUjGt4VYlV 'Strategy')
+
+```java
+
+```
+
+The decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.

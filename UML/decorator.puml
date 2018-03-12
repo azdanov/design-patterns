@@ -1,0 +1,37 @@
+@startuml Decorator
+
+abstract class Beverage {
+  {field} String description = "Unknown beverage"
+  {method} + String getDescription() {...}
+  {method} + abstract double cost()
+}
+
+class Espresso extends Beverage {
+  {method} Espresso() { description = "Espresso" }
+  {method} + double cost() { return 1.99 }
+}
+
+class DarkRoast extends Beverage {
+  {method} DarkRoast() { description = "Espresso" }
+  {method} + double cost() { return .99 }
+}
+
+abstract class CondimentDecorator extends Beverage {
+  {method} + abstract String getDescription()
+}
+
+class Milk extends CondimentDecorator {
+  {field} Beverage beverage;
+  {method} + Milk(Beverage beverage) { this.beverage = beverage }
+  {method} + String getDescription() { return beverage.getDescription() + ", Milk"; }
+  {method} + double cost() { return .10 + beverage.cost() }
+}
+
+class Mocha extends CondimentDecorator {
+  {field} Beverage beverage;
+  {method} + Mocha(Beverage beverage) { this.beverage = beverage }
+  {method} + String getDescription() { return beverage.getDescription() + ", Mocha"; }
+  {method} + double cost() { return .20 + beverage.cost() }
+}
+
+@enduml
