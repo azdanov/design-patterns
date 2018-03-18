@@ -13,6 +13,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Observer](#observer)
     - [Decorator](#decorator)
     - [Factory](#factory)
+      - ["Simple Factory"](#simple-factory)
       - [Factory Method](#factory-method)
       - [Abstract Factory](#abstract-factory)
 
@@ -72,6 +73,12 @@ The Decorator Pattern attaches additional responsibilities to an object dynamica
 ---
 
 ### Factory
+
+#### "Simple Factory"
+
+![Factory Simple](http://www.plantuml.com/plantuml/svg/ZPBB2i8m44Nt-OfPAb9_G11149T2mNrennfeap2TuYFqtqsRgX7QuYeXzypZpcHNioHkgX8ECcD33qXLPKiK8YjbNSD9FPyozGA24m3keh3CMqW6h9VVaPTmRZpt3LjCWykET1NorVYKgn04XdAa_hf8cPGkW1yMb-08kI4DjfFQZMY5Y9epIR8TwIb6rkjjA256Mkh4_HMnnbdaXDOY6QrcgJCMXPfFT9GtgPJKyzLwSTZ42EFY-ONfPOIIyR_nXRoHQy0xeyw7hVlq7-ZNzpGNEP-6VhoFOMBdN_oVV040 'Factory Simple')
+
+"Simple Factory", while not a design pattern, is a simple way to decouple your clients from concrete classes.
 
 #### Factory Method
 

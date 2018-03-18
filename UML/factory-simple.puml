@@ -1,0 +1,34 @@
+@startuml Factory Simple
+
+class PizzaStore {
+  {field} - SimplePizzaFactory factory;
+  PizzaStore(SimplePizzaFactory factory);
+  {method} + Pizza orderPizza(String type) {return pizza};
+}
+
+PizzaStore o--> SimplePizzaFactory
+PizzaStore ..> Pizza
+SimplePizzaFactory ..> CheesePizza
+SimplePizzaFactory ..> PepperoniPizza
+SimplePizzaFactory ..> VeggiePizza
+SimplePizzaFactory ..> HawaiianPizza
+SimplePizzaFactory ..> Pizza
+
+class SimplePizzaFactory {
+  {method} Pizza createPizza(String type) {return pizza};
+}
+
+class CheesePizza extends Pizza {
+}
+
+class PepperoniPizza extends Pizza {
+}
+
+class VeggiePizza extends Pizza {
+}
+
+class HawaiianPizza extends Pizza {
+}
+
+
+@enduml
