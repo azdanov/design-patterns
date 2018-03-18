@@ -1,0 +1,49 @@
+@startuml Factory Abstract
+
+abstract class Pizza {
+}
+
+NYPizzaStore ..> PizzaIngredientFactory
+NYPizzaStore ..> NYPizzaIngredientFactory
+NYPizzaStore ..> Pizza
+NYPizzaIngredientFactory ..> ThinCrustDough
+NYPizzaIngredientFactory ..> ReggianoCheese
+NYPizzaIngredientFactory ..> MarinaraSauce
+NYPizzaIngredientFactory ..> Pizza
+
+class NYPizzaStore {
+  {method} Pizza createPizza();
+}
+
+interface PizzaIngredientFactory {
+  Dough createDough();
+  Sauce createSauce();
+  Cheese createCheese();
+}
+
+class NYPizzaIngredientFactory implements PizzaIngredientFactory {
+  Dough createDough();
+  Sauce createSauce();
+  Cheese createCheese();
+}
+
+interface Dough {
+}
+
+class ThinCrustDough implements Dough {
+}
+
+interface Cheese {
+}
+
+class ReggianoCheese implements Cheese {
+}
+
+interface Sauce {
+}
+
+class MarinaraSauce implements Sauce {
+}
+
+
+@enduml

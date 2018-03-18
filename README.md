@@ -12,6 +12,9 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Strategy](#strategy)
     - [Observer](#observer)
     - [Decorator](#decorator)
+    - [Factory](#factory)
+      - [Method Factory](#method-factory)
+      - [Abstract Factory](#abstract-factory)
 
 ## Basics
 
@@ -22,34 +25,38 @@ A set of common object-oriented ideas that help solve common programming challen
 
 ## Principles
 
-1.  Identify the aspects of your application that vary and separate them from what stays the same.
-2.  Program to an interface, not a concrete implementation.
-3.  Favor composition over inheritance.
-4.  Strive for loosely coupled designs between objects that interact.
-5.  Classes should be open for extension but closed for modification.
+* Identify the aspects of your application that vary and separate them from what stays the same.
+* Program to an interface, not a concrete implementation.
+* Favor composition over inheritance.
+* Strive for loosely coupled designs between objects that interact.
+* Classes should be open for extension but closed for modification.
+* Depend on abstractions. Do not depend on concrete classes.
+  * No variable should hold a reference to a concrete class.
+  * No class should derive from a concrete class.
+  * No method should override an implemented method of any of its base classes.
 
 ## Patterns
 
 ### Strategy
 
-![Strategy](http://www.plantuml.com/plantuml/svg/hP8nRiCm34LtdOAZWoAzGO6W7OjE6J8p5cqJiAH0Ok8cXdlsIXNYo47GBfqaWO__an_Q144lHzF3LZmAjMU5-n2ljK3TOmZmrc5waOTH0OmDKwyd-DeH7fnzfGvFx3mCFyy469BEHMBkg-xH5OmPXnSOfhBdwUHOGyDj9zLCFHy3PObgzO0E94k3l_mcfMuxkVKQbhnIUUztcyO0-XIokeZXMj_n1Rr-L6SRZmPhkbFE0LwdBxPA8sNHxU2yddasXvuCMGc_AkKS2ZqOYywG97EcRDlfvlM1BTV_wsMIvD9h4zE9t-iR 'Strategy')
+![Strategy](http://www.plantuml.com/plantuml/svg/hLBDJiCm3BxdANpiXE0DG1CS4QSTTZQDsrfgaYdnLY0gpqv2H9TL4rmu9PQ_7t-Mjq7Goz6Ci1EFGlsxmjUGlgr0Es88y3HWhiX3L02nOnhr39zxmeEpZpJWYPs7wRlC04Cok8HOUCqQke5Ou70FqrnpRawEDNJS3z8igBjZe2BHRAwW0ycbmLz-ir8bsRFDHa1lGbPNGN_wU_v0hw_rsQQdmvPWvHNh-QgvpwQxoNczuDaSHZ9a9VogL99MUX0hPiYIPMji-ohW2_RS_g-NoPANNkS3SRSFAscbjcbtwRo-0000 'Strategy')
 
-The strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 Strategy lets the algorithm vary independently from clients that use it.
 
 ---
 
 ### Observer
 
-![Observer](http://www.plantuml.com/plantuml/svg/jLJ1JeD04Btp5NEagT2xDaPJOpJHQAA9voqxm5fWoUv0GX2_tQMmbBPKU_6sOT-yVU_D33UQcA8YJU1bhL6Lg9p7Z525B41uAzQV613K3a2T8iMIDr1AmK5X9BI1sIBN7a3E9i2fBF4iQ2P9X9L5Q7VcD8wpIfZMy86CObHtZ1Y8D4ymnOpqliPGO6Ael5kbMFLa52ujrJL8IterHeQ9P0I4QOwAKQ5muZOkKi45LHDNkKAjjrLZA_C_CuBQz_rcgkPKLCSLtzE9GRrOX58X2-B1CuYib1k48kUCq9qr-t8xBn7I-ou7TqhZ07pe8_aTzTgduvxqgv6UaRMORJVTlXqNq2Tl3td7a8wmgvXb4VBMp8ZMsz9Eug0-ogffnyjEaFIytHACjc1eml4Qz7cULjto3_NBBz-7LQ6KaMMdMUWyOPLZb27831AHRIw1Tr-Dv40M2OSrci4mMiYqbGCpGq-cIHXL1zptvZvWcYohNPt9D_VjpC_pSwgFEyKTODZQ0qd__QXpWnatVxCV 'Observer')
+![Observer](http://www.plantuml.com/plantuml/svg/jLH1JiCm4Bpd5NjCLPe-WAegAa8WWK02YRERR1f374Vs9b8Kmjj9sZXrMmTwuMPfPySpisklD355XKZXUQDHbQYyXunGnIn4U2qs7nWIr1v0BP0I6JLGIXw1mYtNBSmq-UO0Sk802rdYHT1C4eyhWz3-n6iyRvqohU4T6IMeRXanu29FKM16-bXZp35jgMOtIh7giLMuC5HBa8RqsaR6gMG4X297nQXGwAWcXU0HfyfHoXLglUkohKp_p0Zg80WQLyzOLESTt-x4e9xFOwcGXSdW6NXMoa-48eyOeJzfZkNklMoHtWuv-2wD0_2-Z-Htr4kVZZ_gLoCz8Uimksdw_JYke4_U7F8zWx2mwuHbMumwCnRjR4Vhn45zbbNJhPUry4FUvnlVHpSkiACoonW4oyDxiXTNpgp2SDlYAmXWNIZLwZLehlEKLIUOktQk8TDagkPjE7kFJKmlSp4sg6ZFEKnoU9OdalxxKc-5MTH-Lpy0 'Observer')
 
-The observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
 ---
 
 ### Decorator
 
-![Decorator](http://www.plantuml.com/plantuml/svg/nPFFIiGm4CRlVOgXfouhHRqjYx1eFNfHV80q7RkXRR8aKnLAtjr4jzd-SR671MyXcM--Rtv3TeQOfhQf8KEkD2EbeuZbXZJZ1Bncni0zlgDc9K8N0NHl0kl2mWjf8Kieq70j3YIKX3k8NsKbrOU4_2Y9lQ91sYidMVUY4YaxwP8LT6cQsd5fo52eDgyHk3AKh28RHJ-XCgQhPyKC0NuIoc8Qi-yKwhpDDEwZEMWqHiKmSH-PEfr6QhM4TBDnbNP6w479GZGeAK3y8zLWlZDCJfC-YReAxNvn6cubkFKBs8vTVQzaLkGdfBqmQN_Xs8IZNRZ2db4lJ6SbQuYllXF4swMyRwxTO-XuVBO3DehlsSNW-6R_JCT7M8xdzYoUdGFYVlKN 'Decorator')
+![Decorator](http://www.plantuml.com/plantuml/svg/nPF1JeGm48RlVOe99pQhZNhRR3GRnQCNZGzGO8G6Q3Vje2Q4TxViBbrWtIm74s-adN_-Vxuf6ql2K5sL466YZI1j61En9ICIWgGKri8ZVg8H6KB309eFYMNQmXiPgJ98qIP6Rabg1VSGlAj2wIy5yK4IT8eAATTEikn56L9qr8KBQ3ZdxRZKPqXr7PS8YROKBbZBs3vK94pngeKbm6z2bKvZzfryNMSpZVjijmQjrG5Ct4UcJcUGQgE0hrQkiZqXzAHLAYjKv25UI3MOxmoJuwGliYnykr-SXblnRlq2rcFNhbTuKjHDIBcql3zmRFndEtE5FQDUo4zAbX1SxH84wxcyRs_SfUzuk6u7R7IIYp-3qpNxPpfTXFbuxixYsJqQVVtWXsPxLACZjd7OtB__0m00 'Decorator')
 
 ```java
 // Example usage of decorator pattern
@@ -60,4 +67,20 @@ System.out.println(beverage.getDescription() + " $" + beverage.cost());
 // Output: Dark Roast Coffee, Mocha, Milk $1.29
 ```
 
-The decorator pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+---
+
+### Factory
+
+#### Method Factory
+
+![Factory Method](http://www.plantuml.com/plantuml/svg/jLEzQiCm4Dxr50TTsYKFq4095Bor13nbLEtFjQXY6UcIDZ5-zqfM11QrAHqwIlVzdj3EiRHyEcegPCN6NkW5t9fQ2FdcsFexghHqZlRgUfKqY548qHa6MVNUCfacJahF1TqrQ53XaIeBoPWczm-a72MroDLeLgd6rh29-Qcq9jMTpGTopULyKMeGH4CQZxVa6NiR4CUfw4Xde-hCTHjAplGscwSeugj7izV3R8mlHbV_J93q5_nfiE2JxQWFvt4oJCebNpJsw7jOqwb8pYpY8sJmvnPmMCLcSKERHPTLs4mz-PR5VosWBFwqW1lybmLaSKEpHPTLMBQ0dHVt_-KR 'Factory Method')
+
+The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+
+#### Abstract Factory
+
+![Factory Abstract](http://www.plantuml.com/plantuml/svg/lLF1QiCm3BtxAtJSBls1mMZf6EomCTfUTjGSBJ4aph2LGnlwxqjbGMnAkvvwUvAVdfvaUnaP0mzT2wzekGzxM7r73XCs1XM1RJ56-7I70y9eZiPyV4cmdGe85eldTFRcwq2L8y-gTSxJn0rC2Sqblb1sZVFhC4H-wOUwkSxTK5qxzFsw8OfqdVkEmNaCkCN1_aDDBarQK373Q036ZhZfgwEkpWP29i4FZq-dFJhF57xGqeK5YefCfyM2JyK0uaxJWbCw3QZv56YpmkHvAzVzjjHDYNWFC_FaIN6S7PRNcllAg7EzziW4ohlE1NBkh93CPmB50yZhCwPPag-cV_C7 'Factory Abstract')
+
+The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.

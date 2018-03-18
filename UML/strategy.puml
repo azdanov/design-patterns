@@ -6,8 +6,6 @@ abstract class Character {
   {method} +void setWeaponBehavior(WeaponBehavior w) {weapon = w}
 }
 
-Character o-- WeaponBehavior
-
 class Knight extends Character
 
 class Wizard extends Character
@@ -23,5 +21,7 @@ class SwordBehavior implements WeaponBehavior {
 class MagicBehavior implements WeaponBehavior {
   {method} +void useWeapon() {implements magic fighting}
 }
+
+Character o-> WeaponBehavior
 
 @enduml

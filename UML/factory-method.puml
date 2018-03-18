@@ -1,0 +1,44 @@
+@startuml Factory Method
+
+abstract class Pizza {
+}
+
+
+note right of PizzaStore #fefece: createPizza() is abstract
+note left of PizzaStore #fefece: orderPizza() will invoke createPizza()
+
+abstract class PizzaStore {
+  {abstract} Pizza createPizza();
+  {method} void orderPizza();
+}
+
+PizzaStore ..> Pizza
+
+
+class NYPizzaStore extends PizzaStore {
+  {method} Pizza createPizza() {return pizza};
+}
+
+class NYStylePepperoniPizza extends Pizza {
+}
+
+class NYStyleCheesePizza extends Pizza {
+}
+
+NYPizzaStore ..> NYStylePepperoniPizza
+NYPizzaStore ..> NYStyleCheesePizza
+
+class SFPizzaStore extends PizzaStore {
+  {method} Pizza createPizza() {return pizza};
+}
+
+class SFStylePepperoniPizza extends Pizza {
+}
+
+class SFStyleCheesePizza extends Pizza {
+}
+
+SFPizzaStore ..> SFStylePepperoniPizza
+SFPizzaStore ..> SFStyleCheesePizza
+
+@enduml

@@ -22,14 +22,14 @@ Class WeatherData implements Subject {
   {method} -void measurementsChanged() {notifyObservers()}
 }
 
-Subject o-- Observer
 
 Interface Observer {
   {method} void update(float t, float h, float p)
 }
 
+Subject ..> Observer
+WeatherData o-> Observer
 Observer <|.. CurrentWeatherDisplay
-note on link: display() could be refactored as Strategy
 Observer <|.. ForecastDisplay
 
 
