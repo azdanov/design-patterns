@@ -13,7 +13,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Observer](#observer)
     - [Decorator](#decorator)
     - [Factory](#factory)
-      - [Method Factory](#method-factory)
+      - [Factory Method](#factory-method)
       - [Abstract Factory](#abstract-factory)
 
 ## Basics
@@ -73,7 +73,7 @@ The Decorator Pattern attaches additional responsibilities to an object dynamica
 
 ### Factory
 
-#### Method Factory
+#### Factory Method
 
 ![Factory Method](http://www.plantuml.com/plantuml/svg/jLEzQiCm4Dxr50TTsYKFq4095Bor13nbLEtFjQXY6UcIDZ5-zqfM11QrAHqwIlVzdj3EiRHyEcegPCN6NkW5t9fQ2FdcsFexghHqZlRgUfKqY548qHa6MVNUCfacJahF1TqrQ53XaIeBoPWczm-a72MroDLeLgd6rh29-Qcq9jMTpGTopULyKMeGH4CQZxVa6NiR4CUfw4Xde-hCTHjAplGscwSeugj7izV3R8mlHbV_J93q5_nfiE2JxQWFvt4oJCebNpJsw7jOqwb8pYpY8sJmvnPmMCLcSKERHPTLs4mz-PR5VosWBFwqW1lybmLaSKEpHPTLMBQ0dHVt_-KR 'Factory Method')
 
