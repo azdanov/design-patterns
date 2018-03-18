@@ -27,6 +27,14 @@ class NYPizzaIngredientFactory implements PizzaIngredientFactory {
   Cheese createCheese();
 }
 
+NYPizzaIngredientFactory ..> Dough
+NYPizzaIngredientFactory ..> Cheese
+NYPizzaIngredientFactory ..> Sauce
+
+PizzaIngredientFactory ..> Dough
+PizzaIngredientFactory ..> Cheese
+PizzaIngredientFactory ..> Sauce
+
 interface Dough {
 }
 
