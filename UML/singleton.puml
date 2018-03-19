@@ -1,0 +1,20 @@
+@startuml Singleton
+class Singleton {
+  {field} - <b>static</b> Singleton <i>uniqueInstance</i>;
+
+  - Singleton() {};
+
+  + <b>static</b> Singleton getInstance() {};
+
+  .. Other methods ..
+}
+
+note right of Singleton #fefece
+  <b>public static</b> Singleton getInstance() {
+    <b>if</b> (<i>uniqueInstance</i> == <b>null</b>) {
+      <i>uniqueInstance</i> = <b>new</b> Singleton();
+    }
+    <b>return</b> uniqueInstance;
+  }
+end note
+@enduml

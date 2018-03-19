@@ -16,6 +16,7 @@ A set of common object-oriented ideas that help solve common programming challen
       - ["Simple Factory"](#simple-factory)
       - [Factory Method](#factory-method)
       - [Abstract Factory](#abstract-factory)
+    - [Singleton](#singleton)
 
 ## Basics
 
@@ -91,3 +92,13 @@ The Factory Method Pattern defines an interface for creating an object, but lets
 ![Factory Abstract](http://www.plantuml.com/plantuml/svg/lLJ1QiCm3BthAtJSBls1mMXfAUomCTfUTjGSBJ4aph2TGnlwxqjbGsnAavnsa-Id9-b9UEqyMTyrDUv9-TQUSVFjl1ri08eMgfgSmqzzkH3sS0Nu-1BdE2GmhbQluUtDb9OBpSP7hdjS32n0YWkFy08vLTfiRUVyhktAQXfxuBBKPDfjnUnu6ljELXkoTAHEpK13bn04ocRe0R5ls5TjSOtIASlaMUodvvURZjfujZ-a-860mYBJnMInRyc8qbqCYnt2OS0O3quibZLvNqetlpKtGy3zHpEJgYxOvv8zXlt1RA7vClD5naq6XVfHyVnCKvqJw9WVDKi8yjjD2LBio12MaH1a1vtc9qXOioc6V-0F 'Factory Abstract')
 
 The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+---
+
+### Singleton
+
+![Singleton](http://www.plantuml.com/plantuml/svg/ZP51YiCm34NtFeLWDWb3smCa3TtEQXPpWiQH4u6hJ1sPBeBlNiKGqa8BtTdoU_yZV9ha72HUFFmHznvbP6FzUPgsEym6O7Q4lakmWxfjr16ozQ5j7gYQciXqZVZ3-iuMwmCrbL5tjr552NFAm--tGJtA6h7X-ptyoe01BYZ3s4qwCCaO7WKXK3y8ZEuXuykXGuigQij_R3rP-AHCXQoGorpnSYau7XU6e_SBjMe0R-WCu-svkIYhRAMrCg34m1bw3bcuP90xMBOr9ptfVzq1 'Singleton')
+
+The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
+
+---
