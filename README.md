@@ -17,6 +17,7 @@ A set of common object-oriented ideas that help solve common programming challen
       - [Factory Method](#factory-method)
       - [Abstract Factory](#abstract-factory)
     - [Singleton](#singleton)
+    - [Command](#command)
 
 ## Basics
 
@@ -102,3 +103,9 @@ The Abstract Factory Pattern provides an interface for creating families of rela
 The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
 
 ---
+
+### Command
+
+![Command](http://www.plantuml.com/plantuml/svg/hPDDImCn48Rl-HK3lQnWwrtBKkn9A2YzU10F-p5nGvDCsSmMeVI_E_lHbMqeKl2MOPwyR_9EiWgSrTmu2sjoBlEbKeNDGe0jEcBSK5PY3KTrKbvAODh3J6lz26jhqFEKNfFdcgpW04Tjq9Qdi-p79oppbFnGXkL3dZvTnRIEE8TSaO01UUWbGXhFBG714j_3A2_BKU9kiftySyDC_ZqBRqseC5AvmBN-cu-oUV47sc6jb81Owwp0y_twQCxg-8r5mvXq6aEI6_DLyHGZdqIdIdvzBMeUZBTOe3cqpjE1q3mTvpiPx6AHzewgzrtEgQzVn_oYZhzuAHSy6BUtwEHnX1jlFIhVAD6ba9ECoKaqqNbc6hNa8ljbTFicjwRefYVLWKpPhKV1pgSZRIlJDXT3t00dXQBNsbqnzV_dwMFBbIpbf_u0 'Command')
+
+The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.

@@ -1,0 +1,51 @@
+@startuml Command
+
+class RemoteLoader {
+}
+note top #fff: Client
+
+class RemoteControl {
+  {field} Command[] <b>onCommands</b>;
+  {field} Command[] <b>offCommands</b>;
+  {method} setCommand(<b>int</b> slot, onCommand, offCommand);
+  {method} onButtonWasPushed(<b>int</b> slot);
+  {method} offButtonWasPushed(<b>int</b> slot);
+}
+note top #fff: Invoker
+
+interface Command {
+  {method} execute();
+}
+
+class Light {
+  {method} on();
+  {method} off();
+}
+note left #fff: Receiver
+
+RemoteControl o-> Command
+RemoteLoader ..> Light
+Light <-o LightOffCommand
+Light <-o LightOnCommand
+
+class LightOffCommand implements Command {
+  {method} execute();
+}
+
+class LightOnCommand implements Command {
+  {method} execute();
+}
+
+note bottom of LightOffCommand #fefece
+  <b>public</b> <b>void</b> execute() {
+    <b>light</b>.off();
+  }
+end note
+
+note bottom of LightOnCommand #fefece
+  <b>public</b> <b>void</b> execute() {
+    <b>light</b>.on();
+  }
+end note
+
+@enduml
