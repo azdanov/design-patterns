@@ -1,0 +1,53 @@
+@startuml Template
+
+abstract class AbstractClass {
+  {method} <b>final</b> templateMethod();
+  {abstract} <b>abstract</b> abstractOperation1();
+  {abstract} <b>abstract</b> abstractOperation2();
+  {method} <b>final</b> concreteOperation1();
+  {method} <b>final</b> concreteOperation2();
+  {method} hook();
+}
+
+note right of AbstractClass #fefece
+  <b>final</b> <b>void</b> templateMethod() {
+    abstractOperation1();
+    abstractOperation2();
+    concreteOperation1();
+    <b>if</b> (hook()) {
+      concreteOperation2();
+    }
+  }
+
+  <b>public</b> void concreteOperation1() {
+    // implementation
+  }
+
+  <b>public</b> void concreteOperation2() {
+    // implementation
+  }
+
+  <b>public</b> boolean hook () {}
+end note
+
+
+
+together {
+
+  class Variatioin1 extends AbstractClass {
+    {method} abstractOperation1();
+    {method} abstractOperation2();
+    .. Optional ..
+    {method} hook();
+  }
+
+  class Variatioin2 extends AbstractClass {
+    {method} abstractOperation1();
+    {method} abstractOperation2();
+    .. Optional ..
+    {method} hook();
+  }
+
+}
+
+@enduml

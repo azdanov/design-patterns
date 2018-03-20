@@ -20,6 +20,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Command](#command)
     - [Adapter](#adapter)
     - [Facade](#facade)
+    - [Template Method](#template-method)
 
 ## Basics
 
@@ -45,6 +46,7 @@ A set of common object-oriented ideas that help solve common programming challen
     * Objects passed in as a parameter to the method
     * Any object the method creates or instantiates
     * Any components of the object
+* Don’t call us, we’ll call you (Hollywood Principle).
 
 ## Patterns
 
@@ -131,3 +133,9 @@ The Adapter Pattern converts the interface of a class into another interface the
 ![Facade](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKN1BJ4vCIUNYIiv9B2vMSCx9JCqhKQZcgeM9GEGX8b1PNLqxc3QehAwkGd5fKd5bSKbghfv_KbPgSeaX7ZbZBgwynDpKueB4v5I4f0BG4WK5g6wGDWZJ29kWCLpG225eWasbALpG69jACsILG2ywfEQb08C50000 'Facade')
 
 The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+### Template Method
+
+![Template](http://www.plantuml.com/plantuml/svg/pLJ1QiCm3BtxAmIxT9U6vhfIEdOklOpT7KTfp1mxEEeObFpxP2SPQnR3Sbj88BBrdfwUZ8yTIK_Nni0hDgsHX4B8eYCl5O4oiklWUGnVOdGJ0BS6gNPb3_lYK6ahpJuh3a0ZmIbkRXwVGkR45NEd8APFmRb5BqaxkriFoKV8eXxbhF98-Al0txBdtBLpxs6f5y8wGl3wKXEuQkRFGuKLAcJa7Jq77qwNYqP5Jo5f22JxXcIFiRgkOhdDe7mg0ybM0NeHla5xUosCLf4XA5yiDL9c6MXk2Hkq5BVMqEHhQGhd34eR1m81t0kq9OIX27x8NTXNz4pAqE48lqcl0wEsEy1FulIbO_rZsEbPf5E-NTnkuTo65Mdu_nurdQAnixcy_3_9u_V8MlXo-080 'Template')
+
+The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
