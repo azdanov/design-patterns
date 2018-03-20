@@ -18,6 +18,8 @@ A set of common object-oriented ideas that help solve common programming challen
       - [Abstract Factory](#abstract-factory)
     - [Singleton](#singleton)
     - [Command](#command)
+    - [Adapter](#adapter)
+    - [Facade](#facade)
 
 ## Basics
 
@@ -30,13 +32,19 @@ A set of common object-oriented ideas that help solve common programming challen
 
 * Identify the aspects of your application that vary and separate them from what stays the same.
 * Program to an interface, not a concrete implementation.
-* Favor composition over inheritance.
-* Strive for loosely coupled designs between objects that interact.
-* Classes should be open for extension but closed for modification.
-* Depend on abstractions. Do not depend on concrete classes.
+* Favor composition over inheritance (Composite reuse principle).
+* Strive for loosely coupled designs between objects that interact (Loosely Coupled Principle).
+* Classes should be open for extension but closed for modification (Open/closed principle).
+* Depend on abstractions. Do not depend on concrete classes (Dependency inversion principle).
   * No variable should hold a reference to a concrete class.
   * No class should derive from a concrete class.
   * No method should override an implemented method of any of its base classes.
+* Talk only to your immediate friends (Principle of Least Knowledge).
+  * Only invoke methods that belong to:
+    * The object itself
+    * Objects passed in as a parameter to the method
+    * Any object the method creates or instantiates
+    * Any components of the object
 
 ## Patterns
 
@@ -59,7 +67,7 @@ The Observer Pattern defines a one-to-many dependency between objects so that wh
 
 ### Decorator
 
-![Decorator](http://www.plantuml.com/plantuml/svg/nPF1JeGm48RlVOe99pQhZNhRR3GRnQCNZGzGO8G6Q3Vje2Q4TxViBbrWtIm74s-adN_-Vxuf6ql2K5sL466YZI1j61En9ICIWgGKri8ZVg8H6KB309eFYMNQmXiPgJ98qIP6Rabg1VSGlAj2wIy5yK4IT8eAATTEikn56L9qr8KBQ3ZdxRZKPqXr7PS8YROKBbZBs3vK94pngeKbm6z2bKvZzfryNMSpZVjijmQjrG5Ct4UcJcUGQgE0hrQkiZqXzAHLAYjKv25UI3MOxmoJuwGliYnykr-SXblnRlq2rcFNhbTuKjHDIBcql3zmRFndEtE5FQDUo4zAbX1SxH84wxcyRs_SfUzuk6u7R7IIYp-3qpNxPpfTXFbuxixYsJqQVVtWXsPxLACZjd7OtB__0m00 'Decorator')
+![Decorator](http://www.plantuml.com/plantuml/svg/nPFFIiGm4CRlVOgXfouhHRqjYx1eFNfHV80q7RkXRR8aKnLAtjr4jzd-SR671MyXcM--Rtv3TeQOfhQf8KEkD2EbeuZbXZJZ1Bncni0zlgDc9K8N0NHl0kl2mWjf8Kieq70j3YIKX3k8NsKbrOU4_2Y9lQ91sYidMVUY4YaxwP8LT6cQsd5fo52eDgyHk3AKh28RHJ-XCgQhPyKC0NuIoc8Qi-yKwhpDDEwZEMWqHiKmSH-PEfr6QhM4TBDnbNP6w479GZGeAK3y8zLWlZDCJfC-YReAxNvn6cubkFKBs8vTVQzaLkGdfBqmQN_Xs8IZNRZ2db4lJ6SbQuYllXF4swMyRwxTO-XuVBO3DehlsSNW-6R_JCT7M8xdzYoUdGFYVlKN 'Decorator')
 
 ```java
 // Example usage of decorator pattern
@@ -109,3 +117,17 @@ The Singleton Pattern ensures a class has only one instance, and provides a glob
 ![Command](http://www.plantuml.com/plantuml/svg/hPDDImCn48Rl-HK3lQnWwrtBKkn9A2YzU10F-p5nGvDCsSmMeVI_E_lHbMqeKl2MOPwyR_9EiWgSrTmu2sjoBlEbKeNDGe0jEcBSK5PY3KTrKbvAODh3J6lz26jhqFEKNfFdcgpW04Tjq9Qdi-p79oppbFnGXkL3dZvTnRIEE8TSaO01UUWbGXhFBG714j_3A2_BKU9kiftySyDC_ZqBRqseC5AvmBN-cu-oUV47sc6jb81Owwp0y_twQCxg-8r5mvXq6aEI6_DLyHGZdqIdIdvzBMeUZBTOe3cqpjE1q3mTvpiPx6AHzewgzrtEgQzVn_oYZhzuAHSy6BUtwEHnX1jlFIhVAD6ba9ECoKaqqNbc6hNa8ljbTFicjwRefYVLWKpPhKV1pgSZRIlJDXT3t00dXQBNsbqnzV_dwMFBbIpbf_u0 'Command')
 
 The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+---
+
+### Adapter
+
+![Adapter](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKN1CIImeIItYuahEIImkLd3EoKpDAr6evghbuihC0qga9IQdAeGa5gMdWaGL5AfpKqioybDg5OfI2qjJYqiqDAr1QY6weOOHgp0LLM5nGMfoPbfcSX2A1gYBzFJieCxWWjcIhuiX1585DPkBoo4rBmNeHG00 'Adapter')
+
+The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+### Facade
+
+![Facade](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKN1BJ4vCIUNYIiv9B2vMSCx9JCqhKQZcgeM9GEGX8b1PNLqxc3QehAwkGd5fKd5bSKbghfv_KbPgSeaX7ZbZBgwynDpKueB4v5I4f0BG4WK5g6wGDWZJ29kWCLpG225eWasbALpG69jACsILG2ywfEQb08C50000 'Facade')
+
+The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.

@@ -1,0 +1,22 @@
+@startuml Facade
+
+class Client {
+}
+
+class Facade {
+}
+
+Client --> Facade
+Facade -- subsystem.Object1
+Facade -- subsystem.Object3
+
+namespace subsystem  {
+  Object1 -- Object2
+  Object1 -- Object3
+  Object2 -- Object4
+  Object1 -- Object5
+  Object3 -- Object4
+  Object6 -- Object5
+}
+
+@enduml

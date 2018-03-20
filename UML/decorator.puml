@@ -29,7 +29,4 @@ class Mocha extends CondimentDecorator {
   {method} + double cost() { return .20 + beverage.cost() }
 }
 
-Milk o-> Beverage
-Mocha o-> Beverage
-
 @enduml
