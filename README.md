@@ -21,6 +21,8 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Adapter](#adapter)
     - [Facade](#facade)
     - [Template Method](#template-method)
+    - [Iterator](#iterator)
+    - [Composite](#composite)
 
 ## Basics
 
@@ -28,6 +30,8 @@ A set of common object-oriented ideas that help solve common programming challen
 * Encapsulation - the action of enclosing something in or as if in a capsule
 * Polymorphism - the condition of occurring in several different forms
 * Inheritance - the practice of passing on functionality
+* Coupling - a term used when two objects are loosely coupled, they can interact, but have very little knowledge of each other.
+* Cohesion - a term used as a measure of how closely a class or a module supports a single purpose or responsibility. A module or class has high cohesion when it is designed around a set of related functions, and it has low cohesion when it is designed around a set of unrelated functions.
 
 ## Principles
 
@@ -47,12 +51,13 @@ A set of common object-oriented ideas that help solve common programming challen
     * Any object the method creates or instantiates
     * Any components of the object
 * Don’t call us, we’ll call you (Hollywood Principle).
+* A class should have only one reason to change (Single responsibility principle).
 
 ## Patterns
 
 ### Strategy
 
-![Strategy](http://www.plantuml.com/plantuml/svg/hLBDJiCm3BxdANpiXE0DG1CS4QSTTZQDsrfgaYdnLY0gpqv2H9TL4rmu9PQ_7t-Mjq7Goz6Ci1EFGlsxmjUGlgr0Es88y3HWhiX3L02nOnhr39zxmeEpZpJWYPs7wRlC04Cok8HOUCqQke5Ou70FqrnpRawEDNJS3z8igBjZe2BHRAwW0ycbmLz-ir8bsRFDHa1lGbPNGN_wU_v0hw_rsQQdmvPWvHNh-QgvpwQxoNczuDaSHZ9a9VogL99MUX0hPiYIPMji-ohW2_RS_g-NoPANNkS3SRSFAscbjcbtwRo-0000 'Strategy')
+![Strategy](http://www.plantuml.com/plantuml/svg/hPG_Ry8m4CLtVueJKr35KgaJKaMBAbLgEp4mL1skyP5OTUp8Tg0KqS_UonyWeG4MXWpMlVlvtRETYG_eGf5fc0M7WPAr4FvBcHmTPk0e3cWIJR0H0CuMHawjC-JWzaviXJZK1rEjo8H19SHFpx0uGApHUvYcMAwugom2R1QAjDp2xvmmj-QHKbmgws1LBMj9HY6rhDdtHiVYuRYhl5bQ9M6XaZH4_JLFeGlfP_9Sq3X_CIKEw3kGaQr13egv-a4dUnHC2JRX_PknMr4zcHXpNsYEMq9j0NOU1ar6oZ1aWJ71aSUwt9gjy5HBec5LgkplxCrMribzhyfoJHaVaxz8hHDhiSV_uM-OgFYgy6Q3Krazk8nnfwEgwcUJgXHzGRsM1ztjRmrq0RoVfy7tPFLCk5nVcrz-lClXVOr6znUkrrdnKRvjxNkgf2JpKJPrt8e9Ntp-V_m1 'Strategy')
 
 The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
 Strategy lets the algorithm vary independently from clients that use it.
@@ -139,3 +144,17 @@ The Facade Pattern provides a unified interface to a set of interfaces in a subs
 ![Template](http://www.plantuml.com/plantuml/svg/pLJ1QiCm3BtxAmIxT9U6vhfIEdOklOpT7KTfp1mxEEeObFpxP2SPQnR3Sbj88BBrdfwUZ8yTIK_Nni0hDgsHX4B8eYCl5O4oiklWUGnVOdGJ0BS6gNPb3_lYK6ahpJuh3a0ZmIbkRXwVGkR45NEd8APFmRb5BqaxkriFoKV8eXxbhF98-Al0txBdtBLpxs6f5y8wGl3wKXEuQkRFGuKLAcJa7Jq77qwNYqP5Jo5f22JxXcIFiRgkOhdDe7mg0ybM0NeHla5xUosCLf4XA5yiDL9c6MXk2Hkq5BVMqEHhQGhd34eR1m81t0kq9OIX27x8NTXNz4pAqE48lqcl0wEsEy1FulIbO_rZsEbPf5E-NTnkuTo65Mdu_nurdQAnixcy_3_9u_V8MlXo-080 'Template')
 
 The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+
+### Iterator
+
+![Iterator](http://www.plantuml.com/plantuml/svg/fP8z3i8m38Ntdi8Z33a1g2fYOk42Y25gJHefFoWn20drxWIQDA6m88OCjlFU-sAbySGTNRI27Q7ZP5rLaHL8FJguLm3IXFw9jmWR8HmAJlZg0xGEGv5aY-KgT8TmMiMzXwsIQEZD85sDUeCt6bK0FVVxedIexHMJvJ13YW7M10B2Z2NrMQ4EgVvNrcWr0HPEVq2FAm36whpS3BPcB2tfyobFpPogAiJiqCkkGtEi9uyObWTPzyM_q7_4D6Ywy2CU 'Iterator')
+
+The Iterator Pattern allows traversal of the elements of an aggregate without exposing the underlying implementation. It also places the task of traversal on the iterator object, not on the aggregate, which simplifies the aggregate interface and implementation, and places the responsibility where it should be.
+
+### Composite
+
+![Composite](http://www.plantuml.com/plantuml/svg/hPA_JiD03CRtUmfBBEdG0KQGKAKi3Bn1nU3UEUIaYrsT3K92UNSkQPEqfLDXl9__VVvy6pNCzj4bgANRYqOZvqpUoLhAyEq0V49Lg5CajlB4dLf6RnCVghY4nbm0sLD6YyBtrUhfd3nC14EevheZozJ99_t2HKVTnXIgU4Izww_gUoLiWBwCEDmYgbyMdMpuGxT_MF7WDwpNpyly6MxR60BnssbiDE0oCfvpsUYycsCfR2Tcqe4q1mll6ch8qoEye08B-45Q9hvCNfhE5RMmOMG512KRacGyafzI5IH3AbFKkKsnjlow7m00 'Composite')
+
+![CompositeTree](http://www.plantuml.com/plantuml/svg/XPFB3i8W44NtynNzWIw4hflws9ZepfrnGNHg6YarGFzV38P7BR0-1xWpDtHACwddaLVxQNnFQj1uaOW04k-QYIV7Qilv6SMigYiu1swXSHW4og-pK1R6KUEuCSe9MRzEIPPIJqECIg7K-UUjamxWEIbmMk3DQiYTHFRgcSh7T5OoQ6IGeX5kpDLOrsthAmDVdWL-dOiZqGpmTyurd2GaIQYvBgWn3FAxCaD9bj8iRG3YQk99xUCbWnGDCr-7uc6-sGS0 'CompositeTree')
+
+The Composite Pattern allows us to build structures of objects in the form of trees that contain both compositions of objects and individual objects as nodes. Using a composite structure, we can apply the same operations over both composites and individual objects. In other words, in most cases we can ignore the differences between compositions of objects and individual objects.

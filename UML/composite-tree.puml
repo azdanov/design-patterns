@@ -1,0 +1,66 @@
+@startuml CompositeTree
+
+rectangle AllMenus [
+Composite
+]
+
+rectangle DinerMenu [
+Composite
+]
+rectangle DinerItem1 [
+Leaf
+]
+rectangle DinerItem2 [
+Leaf
+]
+rectangle DinerItem3 [
+Leaf
+]
+
+rectangle DessertMenu [
+Composite
+]
+rectangle DessertItem1 [
+Leaf
+]
+rectangle DessertItem2 [
+Leaf
+]
+rectangle DessertItem3 [
+Leaf
+]
+rectangle DessertItem4 [
+Leaf
+]
+
+rectangle BreakfastMenu [
+Composite
+]
+rectangle BreakfastItem1 [
+Leaf
+]
+rectangle BreakfastItem2 [
+Leaf
+]
+rectangle BreakfastItem3 [
+Leaf
+]
+
+AllMenus -->> DinerMenu
+DinerMenu -->> DessertMenu
+AllMenus -->> BreakfastMenu
+
+DinerMenu -->> DinerItem1
+DinerMenu -->> DinerItem2
+DinerMenu -->> DinerItem3
+
+DessertMenu -->> DessertItem1
+DessertMenu -->> DessertItem2
+DessertMenu -->> DessertItem3
+DessertMenu -->> DessertItem4
+
+BreakfastMenu -->> BreakfastItem1
+BreakfastMenu -->> BreakfastItem2
+BreakfastMenu -->> BreakfastItem3
+
+@enduml

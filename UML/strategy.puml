@@ -1,27 +1,53 @@
 @startuml Strategy
-abstract class Character {
-  {field} ~WeaponBehavior weapon
-  {method} Character(WeaponBehavior w) {weapon = w}
-  {method} +void fight() {weapon.useWeapon()}
-  {method} +void setWeaponBehavior(WeaponBehavior w) {weapon = w}
+
+skinparam rectangle {
+  roundCorner 25
 }
 
-class Knight extends Character
+rectangle "Client" {
+  abstract class Character {
+    {field} ~WeaponBehavior weapon
+    {method} Character(WeaponBehavior w);
+    {method} +void fight();
+    {method} +void setWeaponBehavior(WeaponBehavior w);
+  }
 
-class Wizard extends Character
+  class Knight extends Character
 
-interface WeaponBehavior {
-  {method} useWeapon()
+  class Wizard extends Character
 }
 
-class SwordBehavior implements WeaponBehavior {
-  {method} +void useWeapon() {implements sword fighting}
+together {
+  rectangle "Encapsulated Weapon Behavior" {
+    interface WeaponBehavior {
+      {method} useWeapon()
+    }
+
+    class SwordBehavior implements WeaponBehavior {
+      {method} +void useWeapon();
+    }
+
+    class MagicBehavior implements WeaponBehavior {
+      {method} +void useWeapon();
+    }
+  }
+
+  rectangle "Encapsulated Armor Behavior" {
+    interface ArmorBehavior {
+      {method} useArmor()
+    }
+
+    class LightArmorBehavior implements ArmorBehavior {
+      {method} +void useArmor();
+    }
+
+    class HeavyArmorBehavior implements ArmorBehavior {
+      {method} +void useArmor();
+    }
+  }
 }
 
-class MagicBehavior implements WeaponBehavior {
-  {method} +void useWeapon() {implements magic fighting}
-}
-
-Character o-> WeaponBehavior
-
+Character --> "Encapsulated Weapon Behavior"
+Character --> "Encapsulated Armor Behavior"
+Character -[hidden]--> ArmorBehavior
 @enduml

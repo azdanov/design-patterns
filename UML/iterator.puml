@@ -1,0 +1,35 @@
+@startuml Iterator
+
+together {
+  interface Aggregate {
+    createIterator();
+  }
+  class Client
+  interface Iterator {
+    next();
+    hasNext();
+    remove();
+  }
+}
+
+together {
+  class ConcreteAggregate implements Aggregate {
+    createIterator();
+  }
+  class ConcreteIterator implements Iterator {
+    next();
+    hasNext();
+    remove();
+  }
+}
+
+Client --> Iterator
+Aggregate <-- Client
+ConcreteAggregate --> ConcreteIterator
+
+Aggregate -[hidden]> Client
+Client -[hidden]> Iterator
+
+ConcreteAggregate -[hidden]> ConcreteIterator
+
+@enduml

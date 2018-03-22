@@ -1,0 +1,36 @@
+@startuml Composite
+
+together {
+  class Client
+  abstract class Component {
+    operation1();
+    operation2();
+    add(Component);
+    remove(Component);
+    getChild(int);
+  }
+}
+
+together {
+  class Leaf extends Component {
+    operation1();
+    operation2();
+  }
+  class Composite extends Component {
+    operation1();
+    operation2();
+    add(Component);
+    remove(Component);
+    getChild(int);
+  }
+}
+
+Client --> Component
+Client -[hidden]> Component
+Leaf -[hidden]> Composite
+Composite --> Component
+
+note bottom of Leaf #fefece: Has no children
+note bottom of Composite #fefece: Contains a set of other composites or leafs
+
+@enduml
