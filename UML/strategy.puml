@@ -7,9 +7,12 @@ skinparam rectangle {
 rectangle "Client" {
   abstract class Character {
     {field} ~WeaponBehavior weapon
-    {method} Character(WeaponBehavior w);
+    {field} ~ArmorBehavior armor
+    {method} Character(WeaponBehavior w, ArmorBehavior a);
     {method} +void fight();
+    {method} +void defend();
     {method} +void setWeaponBehavior(WeaponBehavior w);
+    {method} +void setArmorBehavior(ArmorBehavior a);
   }
 
   class Knight extends Character
