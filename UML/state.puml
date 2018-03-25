@@ -1,0 +1,24 @@
+@startuml State
+
+class Context {
+  {field} State state;
+  {method} request() {state.handle()}
+}
+
+interface State {
+  handle();
+}
+
+class StateA extends State {
+  handle();
+}
+
+class StateB extends State {
+  handle();
+}
+
+Context --> State
+
+Context -[hidden]> State
+
+@enduml

@@ -23,6 +23,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Template Method](#template-method)
     - [Iterator](#iterator)
     - [Composite](#composite)
+    - [State](#state)
 
 ## Basics
 
@@ -133,11 +134,15 @@ The Command Pattern encapsulates a request as an object, thereby letting you par
 
 The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
+---
+
 ### Facade
 
 ![Facade](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKN1BJ4vCIUNYIiv9B2vMSCx9JCqhKQZcgeM9GEGX8b1PNLqxc3QehAwkGd5fKd5bSKbghfv_KbPgSeaX7ZbZBgwynDpKueB4v5I4f0BG4WK5g6wGDWZJ29kWCLpG225eWasbALpG69jACsILG2ywfEQb08C50000 'Facade')
 
 The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+---
 
 ### Template Method
 
@@ -145,11 +150,15 @@ The Facade Pattern provides a unified interface to a set of interfaces in a subs
 
 The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
 
+---
+
 ### Iterator
 
 ![Iterator](http://www.plantuml.com/plantuml/svg/fP8z3i8m38Ntdi8Z33a1g2fYOk42Y25gJHefFoWn20drxWIQDA6m88OCjlFU-sAbySGTNRI27Q7ZP5rLaHL8FJguLm3IXFw9jmWR8HmAJlZg0xGEGv5aY-KgT8TmMiMzXwsIQEZD85sDUeCt6bK0FVVxedIexHMJvJ13YW7M10B2Z2NrMQ4EgVvNrcWr0HPEVq2FAm36whpS3BPcB2tfyobFpPogAiJiqCkkGtEi9uyObWTPzyM_q7_4D6Ywy2CU 'Iterator')
 
 The Iterator Pattern allows traversal of the elements of an aggregate without exposing the underlying implementation. It also places the task of traversal on the iterator object, not on the aggregate, which simplifies the aggregate interface and implementation, and places the responsibility where it should be.
+
+---
 
 ### Composite
 
@@ -158,3 +167,11 @@ The Iterator Pattern allows traversal of the elements of an aggregate without ex
 ![CompositeTree](http://www.plantuml.com/plantuml/svg/XPFB3i8W44NtynNzWIw4hflws9ZepfrnGNHg6YarGFzV38P7BR0-1xWpDtHACwddaLVxQNnFQj1uaOW04k-QYIV7Qilv6SMigYiu1swXSHW4og-pK1R6KUEuCSe9MRzEIPPIJqECIg7K-UUjamxWEIbmMk3DQiYTHFRgcSh7T5OoQ6IGeX5kpDLOrsthAmDVdWL-dOiZqGpmTyurd2GaIQYvBgWn3FAxCaD9bj8iRG3YQk99xUCbWnGDCr-7uc6-sGS0 'CompositeTree')
 
 The Composite Pattern allows us to build structures of objects in the form of trees that contain both compositions of objects and individual objects as nodes. Using a composite structure, we can apply the same operations over both composites and individual objects. In other words, in most cases we can ignore the differences between compositions of objects and individual objects.
+
+---
+
+### State
+
+![State](http://www.plantuml.com/plantuml/svg/ZP0n2iCm34LtdK9ZCgGN29IqFKB7qi742ZOu3hKKA1ZVlNPIPsqN3Vy_VV4riAWWw-pmBae8O7IA6M-B5teBHa2CaoMdqmuWbzaNUIOnIzO3lLPYQLgCctaoocj7JPiW0TWS52OrqdU_95QWBy1-S3Clc6-Ir_m7U_t5rWfTTwxT3kbXhDRaduSpvAJyX0y0 'State')
+
+The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
