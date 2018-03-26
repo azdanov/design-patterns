@@ -24,6 +24,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Iterator](#iterator)
     - [Composite](#composite)
     - [State](#state)
+    - [Proxy](#proxy)
 
 ## Basics
 
@@ -175,3 +176,13 @@ The Composite Pattern allows us to build structures of objects in the form of tr
 ![State](http://www.plantuml.com/plantuml/svg/ZP0n2iCm34LtdK9ZCgGN29IqFKB7qi742ZOu3hKKA1ZVlNPIPsqN3Vy_VV4riAWWw-pmBae8O7IA6M-B5teBHa2CaoMdqmuWbzaNUIOnIzO3lLPYQLgCctaoocj7JPiW0TWS52OrqdU_95QWBy1-S3Clc6-Ir_m7U_t5rWfTTwxT3kbXhDRaduSpvAJyX0y0 'State')
 
 The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+---
+
+### Proxy
+
+![Proxy](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKGWeog-evEBAp2j9BKfBJ4vL22vDoafDBb6evb9GA4ejB4qjBj7GjEQgvU9ApaaiBbO8IatCWQd9p2t8ISrDpIif9gWDR0zn6f1jq8tEo4n9ISsBjOEw55dIHbSNvdw7rBmKe7S0 'Proxy')
+
+![ProxyRemote](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKGWeog-e34hDpIz9vU9ApialJL6evb9Gq73EoKpDAz5Kq2tAJCyeqRLJq02hrBHIA4ejB4qjBj7GvAf5qG6HLz3BIKqhqGEg3qfDp0akJSfAJIv1r-MGcfS2j1m0 'ProxyRemote')
+
+The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.

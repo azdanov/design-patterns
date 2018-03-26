@@ -1,0 +1,11 @@
+@startuml ProxyRemote
+
+cloud {
+  (Client) -right-> (Proxy): request()
+}
+
+cloud {
+  (Proxy) .left.> (RealSubject): request()
+}
+
+@enduml
