@@ -25,6 +25,7 @@ A set of common object-oriented ideas that help solve common programming challen
     - [Composite](#composite)
     - [State](#state)
     - [Proxy](#proxy)
+    - [Compound](#compound)
 
 ## Basics
 
@@ -186,3 +187,9 @@ The State Pattern allows an object to alter its behavior when its internal state
 ![ProxyRemote](http://www.plantuml.com/plantuml/svg/SoWkIImgAStDKGWeog-e34hDpIz9vU9ApialJL6evb9Gq73EoKpDAz5Kq2tAJCyeqRLJq02hrBHIA4ejB4qjBj7GvAf5qG6HLz3BIKqhqGEg3qfDp0akJSfAJIv1r-MGcfS2j1m0 'ProxyRemote')
 
 The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.
+
+---
+
+### Compound
+
+A Compound Pattern combines two or more patterns into a solution that solves a recurring or general problem. For example _Model-View-Controller_.
